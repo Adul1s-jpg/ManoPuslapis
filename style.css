@@ -17,9 +17,12 @@ header {
     color: #fff;
 }
 
-.logo {
-    height: 50px;
+.logo img {
+    background-color: transparent; /* Užtikrinti, kad fonas būtų permatomas */
+    width: 50px; /* Leisti logotipui automatiškai užimti reikalingą plotį */
+    height: 50px; /* Leisti logotipui automatiškai užimti reikalingą aukštį */
 }
+
 
 .nav-links {
     list-style: none;
@@ -32,22 +35,26 @@ header {
     margin-left: 20px;
 }
 
+/* Navigacijos mygtukų aktyvus ir hover efektas */
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* Pagrindinė spalva */
     font-size: 16px;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
 }
 
+/* Aktyvus mygtukas - šviesiai mėlynas */
+.nav-links a.active,
 .nav-links a:hover {
-    color: #ff6347; /* Hover efektas */
+    color: #fff;
+    background-color: #87ceeb; /* Šviesiai mėlyna */
 }
 
-/* Papildomi stiliai, kad navigacijos mygtukai būtų šviesiai mėlyni */
-.nav-links a.active {
-    background-color: #87ceeb; /* Šviesiai mėlynas fonas aktyviam mygtukui */
-    color: #fff;
+/* Jei yra hover, pakeisti mygtuko foną */
+.nav-links a:hover {
+    color: #fff; /* Užtikrinti, kad tekstas išliktų baltas */
 }
+
 
 /* Main turinio stilius */
 main {
