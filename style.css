@@ -43,6 +43,12 @@ header {
     color: #ff6347; /* Hover efektas */
 }
 
+/* Papildomi stiliai, kad navigacijos mygtukai būtų šviesiai mėlyni */
+.nav-links a.active {
+    background-color: #87ceeb; /* Šviesiai mėlynas fonas aktyviam mygtukui */
+    color: #fff;
+}
+
 /* Main turinio stilius */
 main {
     padding: 20px 10%;
@@ -61,6 +67,65 @@ main h1, main h2 {
     list-style: disc;
     margin-left: 20px;
     padding: 0;
+}
+
+/* Apie puslapio sekcija */
+.about-section {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.about-section .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Apvalus kraštas */
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-details ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.profile-details ul li strong {
+    font-weight: bold;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #add8e6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #87ceeb;
 }
 
 /* Footer stilius */
@@ -113,5 +178,19 @@ footer a:hover {
 
     .nav-links li {
         margin: 10px 0;
+    }
+
+    .about-section .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-details {
+        text-align: center;
     }
 }
