@@ -4,7 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Šviesiai pilkas fonas */
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -24,7 +24,7 @@ header {
 }
 
 header .site-title img {
-    max-width: 150px; /* Logotipo dydis */
+    max-width: 150px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -73,21 +73,63 @@ section {
 }
 
 section h1, section h2 {
-    background-color: #eaeaea; /* Šviesiai pilkas fonas */
+    background-color: #eaeaea;
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 20px;
 }
 
-.features ul {
-    list-style-type: disc;
-    text-align: left;
-    padding-left: 40px;
-    margin: 20px 0 0 0;
+/* Profilio nuotraukos stiliai */
+.profile-image img {
+    max-width: 200px; /* Nuotraukos plotis */
+    height: auto;
+    border-radius: 50%; /* Apvalus kampas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
 }
 
-.features ul li {
-    margin-bottom: 10px;
+/* Mygtukų stiliai */
+button, .cta-btn {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+button:hover, .cta-btn:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+button:active, .cta-btn:active {
+    transform: scale(0.95);
+}
+
+/* Portfolio projektų elementai */
+.project-item {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 /* Footer stiliai */
@@ -117,26 +159,6 @@ footer .social-icons img {
 
 footer .social-icons img:hover {
     transform: scale(1.2);
-}
-
-/* Mygtukų stiliai */
-button, .nav-links li a {
-    cursor: pointer;
-}
-
-button {
-    background-color: #444;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
 }
 
 /* Mažesni ekranai */
