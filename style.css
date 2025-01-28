@@ -1,180 +1,112 @@
-/* Bendrieji stiliai */
+/* Bendri stiliai visam puslapiui */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9; /* Šviesiai pilkas fonas */
     color: #333;
-    background-color: #f9f9f9;
 }
 
+/* Konteinerio stiliai */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    text-align: center; /* Užtikrina centravimą */
 }
 
-/* Navigacijos meniu */
-.header {
-    background: #333;
+/* Header stiliai */
+header {
+    background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Logotipas ir meniu lygiagrečiai */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 4px solid #555;
 }
 
-.header .logo h1 {
-    font-size: 24px;
-    margin: 0;
-    color: #fff;
-    max-height: 60px; /* Fiksuotas logotipo aukštis */
-    overflow: hidden;
-    display: inline-block;
+header .site-title img {
+    max-width: 150px; /* Logotipo dydis */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.navmenu ul {
+/* Navigacija */
+.nav-links {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0 0 0;
 }
 
-.navmenu ul li {
-    margin: 0 10px;
-}
-
-.navmenu ul li a {
-    color: #fff;
+.nav-links li a {
     text-decoration: none;
-    font-size: 16px;
-    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
 
-.navmenu ul li a.active,
-.navmenu ul li a:hover {
-    background-color: #87ceeb;
-    color: #000;
-    border-radius: 5px;
+.nav-links li a:hover {
+    background-color: #555;
+    color: #f9f9f9;
 }
 
-/* Puslapio pavadinimai */
-.page-title {
-    text-align: center;
-    background: #e8e8e8; /* Šviesiai pilkas fonas */
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
+.nav-links li a.active {
+    background-color: #444;
+    color: #fff;
 }
 
-.page-title h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: #333;
-}
-
-/* Turinys */
+/* Sekcijos */
 main {
     padding: 20px 0;
+}
+
+.welcome, .features {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 40px 20px;
     text-align: center;
 }
 
-.profile-image img {
-    max-width: 100%;
-    height: auto;
-    max-height: 300px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.features ul {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 40px;
+    margin: 20px 0 0 0;
 }
 
-.profile-details {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.profile-details h2 {
-    font-size: 1.8rem;
+.features ul li {
     margin-bottom: 10px;
 }
 
-/* Sąrašai */
-ul {
-    list-style-position: inside; /* Taškai bus arčiau teksto */
-    margin: 0;
-    padding: 0;
-    text-align: left; /* Sąrašas kairėje pusėje */
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Mygtukai */
-a.cta-btn, button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-    text-align: center;
-    cursor: pointer;
-}
-
-a.cta-btn:hover, button:hover {
-    background-color: #87ceeb;
-    color: #000;
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-/* Portfolio projektų elementai */
-.project-item {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-
-.project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.project-item h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.project-item p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Footer */
+/* Footer stiliai */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 20px;
+    border-top: 4px solid #555;
+}
+
+footer .social-icons {
+    margin: 20px 0;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
 }
 
 footer .social-icons img {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
+    max-width: 30px;
+    height: auto;
     transition: transform 0.3s;
 }
 
@@ -182,7 +114,42 @@ footer .social-icons img:hover {
     transform: scale(1.2);
 }
 
-footer p {
-    margin: 5px 0;
-    font-size: 14px;
+/* Mygtukų stiliai */
+button, .nav-links li a {
+    cursor: pointer;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Sekcijų antraštės atskyrimas */
+.welcome h1, .features h2 {
+    background-color: #eaeaea; /* Šviesiai pilkas fonas */
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Mažesni ekranai */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features ul {
+        padding-left: 20px;
+    }
 }
