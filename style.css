@@ -23,24 +23,20 @@ header {
     border-bottom: 4px solid #555;
 }
 
-header .site-title img {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Navigacijos stiliai */
-header .nav-links {
-    list-style: none;
+.navmenu ul {
+    list-style: none; /* Pašalina bulletpoints */
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 0;
-    margin: 20px 0 0 0;
+    margin: 0;
 }
 
-header .nav-links li a {
+.navmenu ul li {
+    display: inline; /* Užtikrina horizontalią elementų išdėstymą */
+}
+
+.navmenu ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
@@ -49,16 +45,14 @@ header .nav-links li a {
     transition: background-color 0.3s, color 0.3s;
 }
 
-header .nav-links li a:hover {
+.navmenu ul li a:hover {
     background-color: #555;
     color: #f9f9f9;
 }
 
-header .nav-links li a.active {
-    background-color: #008cba; /* Aktyvios nuorodos spalva */
+.navmenu ul li a.active {
+    background-color: #444;
     color: #fff;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Sekcijos */
@@ -166,7 +160,7 @@ footer .social-icons img:hover {
 
 /* Mažesni ekranai */
 @media (max-width: 768px) {
-    .nav-links {
+    .navmenu ul {
         flex-direction: column;
         align-items: center;
     }
