@@ -43,16 +43,14 @@ header {
     transition: color 0.3s, background-color 0.3s;
 }
 
-/* Aktyvus mygtukas - šviesiai mėlynas */
 .nav-links a.active,
 .nav-links a:hover {
     color: #fff;
     background-color: #87ceeb; /* Šviesiai mėlyna */
 }
 
-/* Užtikrina, kad paspaudus mygtukas nekeistų spalvos visam laikui */
 .nav-links a:visited {
-    color: #fff;
+    color: inherit; /* Išlaiko tą pačią spalvą kaip ir originalas */
 }
 
 /* Pagrindinis turinys */
@@ -76,4 +74,11 @@ footer {
     background-color: #333;
     color: #fff;
     margin-top: 30px;
+}
+
+/* Socialinių tinklų ikonų dydis */
+footer img {
+    height: 40px; /* Fiksuotas aukštis ikonoms */
+    width: auto; /* Automatiškai išlaiko proporcijas */
+    margin: 0 10px; /* Tarpas tarp ikonų */
 }
