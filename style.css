@@ -5,13 +5,14 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #f9f9f9; /* Šviesiai pilkas fonas */
+    background-color: #f9f9f9;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: center; /* Užtikrina centravimą */
 }
 
 /* Navigacijos meniu */
@@ -19,12 +20,18 @@ body {
     background: #333;
     color: #fff;
     padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logotipas ir meniu lygiagrečiai */
 }
 
 .header .logo h1 {
     font-size: 24px;
     margin: 0;
     color: #fff;
+    max-height: 60px; /* Fiksuotas logotipo aukštis */
+    overflow: hidden;
+    display: inline-block;
 }
 
 .navmenu ul {
@@ -33,6 +40,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .navmenu ul li {
@@ -70,8 +78,8 @@ body {
 
 /* Turinys */
 main {
-    text-align: center; /* Centruojamas turinys */
     padding: 20px 0;
+    text-align: center;
 }
 
 .profile-image img {
@@ -94,12 +102,24 @@ main {
     margin-bottom: 10px;
 }
 
+/* Sąrašai */
+ul {
+    list-style-position: inside; /* Taškai bus arčiau teksto */
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Sąrašas kairėje pusėje */
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
 /* Mygtukai */
 a.cta-btn, button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #333;
-    color: #ffffff58; /* Tekstas visada baltas */
+    color: #fff;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -111,7 +131,7 @@ a.cta-btn, button {
 
 a.cta-btn:hover, button:hover {
     background-color: #87ceeb;
-    color: #000; /* Teksto spalva keičiasi tik ant kitų mygtukų */
+    color: #000;
 }
 
 button:active {
