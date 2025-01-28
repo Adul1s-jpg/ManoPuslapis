@@ -21,7 +21,7 @@ body {
     padding: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Atskyrimas tarp logotipo ir navigacijos */
 }
 
 .header .logo {
@@ -29,10 +29,10 @@ body {
 }
 
 .header .logo h1 {
-    font-size: 20px; /* Sumažintas logotipo dydis */
+    font-size: 16px; /* Sumažintas logotipo dydis */
     margin: 0;
     color: #fff;
-    max-height: 50px; /* Mažesnis aukštis */
+    max-height: 40px; /* Mažesnis aukštis */
     overflow: hidden;
     display: inline-block;
 }
@@ -63,6 +63,19 @@ body {
     background-color: #87ceeb;
     color: #000;
     border-radius: 5px;
+}
+
+/* Centravimas apie puslapiuose */
+.about-page .navmenu ul {
+    justify-content: center;
+}
+
+.portfolio-page .navmenu ul {
+    justify-content: center;
+}
+
+.resume-page .navmenu ul {
+    justify-content: center;
 }
 
 /* Puslapio pavadinimai */
