@@ -1,4 +1,4 @@
-/* Bendri stiliai visam puslapiui */
+/* Bendri stiliai */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -8,7 +8,6 @@ body {
     color: #333;
 }
 
-/* Konteinerio stiliai */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -31,7 +30,6 @@ header .site-title img {
     margin: 0 auto;
 }
 
-/* Navigacija */
 .nav-links {
     list-style: none;
     display: flex;
@@ -65,13 +63,20 @@ main {
     padding: 20px 0;
 }
 
-.welcome, .features {
+section {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
     padding: 40px 20px;
     text-align: center;
+}
+
+section h1, section h2 {
+    background-color: #eaeaea; /* Šviesiai pilkas fonas */
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .features ul {
@@ -132,14 +137,6 @@ button {
 button:hover {
     background-color: #555;
     transform: scale(1.05);
-}
-
-/* Sekcijų antraštės atskyrimas */
-.welcome h1, .features h2 {
-    background-color: #eaeaea; /* Šviesiai pilkas fonas */
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 20px;
 }
 
 /* Mažesni ekranai */
