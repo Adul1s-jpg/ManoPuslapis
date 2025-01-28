@@ -29,7 +29,7 @@ body {
 }
 
 .header .logo h1 {
-    font-size: 16px; /* Sumažintas logotipo dydis */
+    font-size: 14px; /* Dar labiau sumažintas logotipo dydis */
     margin: 0;
     color: #fff;
     max-height: 40px; /* Mažesnis aukštis */
@@ -76,6 +76,11 @@ body {
 
 .resume-page .navmenu ul {
     justify-content: center;
+}
+
+/* Paslėpti „Nedo Svetainė“ mygtuką index.html */
+.index-page .navmenu ul li:last-child {
+    display: none;
 }
 
 /* Puslapio pavadinimai */
