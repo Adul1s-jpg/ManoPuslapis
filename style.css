@@ -17,13 +17,13 @@ header {
     color: #fff;
 }
 
-.logo img {
-    background-color: transparent; /* Užtikrinti, kad fonas būtų permatomas */
-    height: 50px; /* Logotipo aukštis bus 50px */
+/* Logotipo dydžio taisymas */
+.site-title img {
+    height: 100px; /* Fiksuotas aukštis */
     width: auto; /* Automatiškai išlaiko proporcijas */
 }
 
-
+/* Navigacijos meniu */
 .nav-links {
     list-style: none;
     margin: 0;
@@ -50,13 +50,12 @@ header {
     background-color: #87ceeb; /* Šviesiai mėlyna */
 }
 
-/* Jei yra hover, pakeisti mygtuko foną */
-.nav-links a:hover {
-    color: #fff; /* Užtikrinti, kad tekstas išliktų baltas */
+/* Užtikrina, kad paspaudus mygtukas nekeistų spalvos visam laikui */
+.nav-links a:visited {
+    color: #fff;
 }
 
-
-/* Main turinio stilius */
+/* Pagrindinis turinys */
 main {
     padding: 20px 10%;
 }
@@ -70,71 +69,6 @@ main h1, main h2 {
     margin-bottom: 30px;
 }
 
-.features ul {
-    list-style: disc;
-    margin-left: 20px;
-    padding: 0;
-}
-
-/* Apie puslapio sekcija */
-.about-section {
-    background-color: #fff;
-    padding: 50px 0;
-}
-
-.about-section .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-}
-
-.profile-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Apvalus kraštas */
-    object-fit: cover;
-}
-
-.profile-details {
-    flex: 1;
-}
-
-.profile-details h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.profile-details ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.profile-details ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.profile-details ul li strong {
-    font-weight: bold;
-}
-
-.cta-btn {
-    display: inline-block;
-    background-color: #add8e6;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-    background-color: #87ceeb;
-}
-
 /* Footer stilius */
 footer {
     text-align: center;
@@ -142,62 +76,4 @@ footer {
     background-color: #333;
     color: #fff;
     margin-top: 30px;
-}
-
-footer .social-icons {
-    margin-bottom: 10px;
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .social-icons img {
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-footer .social-icons img:hover {
-    transform: scale(1.1); /* Užvedus ikonėlė padidėja */
-}
-
-footer a {
-    color: #ff6347;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsyvus dizainas */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .about-section .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-image img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .profile-details {
-        text-align: center;
-    }
 }
