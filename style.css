@@ -19,8 +19,8 @@ header {
 
 .logo img {
     background-color: transparent; /* Užtikrinti, kad fonas būtų permatomas */
-    width: 50px; /* Leisti logotipui automatiškai užimti reikalingą plotį */
-    height: 50px; /* Leisti logotipui automatiškai užimti reikalingą aukštį */
+    height: 50px; /* Logotipo aukštis bus 50px */
+    width: auto; /* Automatiškai išlaiko proporcijas */
 }
 
 

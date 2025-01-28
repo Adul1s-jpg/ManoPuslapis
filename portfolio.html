@@ -2,68 +2,77 @@
 <html lang="lt">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio - Nedas Adulis</title>
+  <meta name="description" content="Portfolio">
+  <meta name="keywords" content="HTML, CSS, studentas, laboratoriniai darbai">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <!-- Header section -->
-  <header>
-    <div class="logo-container">
-      <img src="img/logo.png" alt="Logotipas" class="logo">
-      <h1 class="sitename">Mano Portfolio</h1>
+<body class="portfolio-page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <h1>NedoSvetaine</h1>
+      </a>
+      <nav class="navmenu">
+        <ul>
+          <li><a href="index.html">Pagrindinis</a></li>
+          <li><a href="about.html">Apie</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Pagrindinis</a></li>
-        <li><a href="about.html">Apie mane</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Main content -->
+  <!-- Main Content -->
   <main>
-    <div class="welcome">
-      <h1>Mano Portfolio</h1>
-      <p>Sveiki atvykę į mano darbų portfolio. Čia rasite projektus, kuriuos esu sukūręs per savo mokymosi ir darbo laikotarpį.</p>
-    </div>
+    <section class="page-title">
+      <div class="container text-center">
+        <h1>Portfolio</h1>
+        <p>Mano projektai ir darbai, atlikti per mokymosi laikotarpį.</p>
+      </div>
+    </section>
 
-    <section class="portfolio">
-      <h2>Projektai</h2>
-      <div class="project-list">
-        <div class="project-item">
-          <img src="img/project1.png" alt="Projektas 1">
-          <h3>Projektas 1</h3>
-          <p>Aprašymas apie projektą 1. Kas tai yra, kaip tai veikia ir kokios technologijos buvo naudojamos.</p>
-        </div>
-        <div class="project-item">
-          <img src="img/project2.png" alt="Projektas 2">
-          <h3>Projektas 2</h3>
-          <p>Aprašymas apie projektą 2. Kas tai yra, kaip tai veikia ir kokios technologijos buvo naudojamos.</p>
-        </div>
-        <div class="project-item">
-          <img src="img/project3.png" alt="Projektas 3">
-          <h3>Projektas 3</h3>
-          <p>Aprašymas apie projektą 3. Kas tai yra, kaip tai veikia ir kokios technologijos buvo naudojamos.</p>
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <div class="project-list">
+          <div class="project-item">
+            <img src="img/project1.jpg" alt="Projektas 1">
+            <h3>Projektas 1</h3>
+            <p>Trumpas aprašymas apie projektą, jo funkcionalumą ir naudotas technologijas.</p>
+          </div>
+          <div class="project-item">
+            <img src="img/project2.jpg" alt="Projektas 2">
+            <h3>Projektas 2</h3>
+            <p>Trumpas aprašymas apie projektą, jo funkcionalumą ir naudotas technologijas.</p>
+          </div>
+          <div class="project-item">
+            <img src="img/project3.jpg" alt="Projektas 3">
+            <h3>Projektas 3</h3>
+            <p>Trumpas aprašymas apie projektą, jo funkcionalumą ir naudotas technologijas.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer section -->
-  <footer>
-    <div class="social-icons">
-      <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
-      <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
-      <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Nedas Adulis. Visos teisės saugomos.</p>
+      <div class="social-links">
+        <a href="#"><img src="assets/img/twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="assets/img/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/img/instagram-icon.png" alt="Instagram"></a>
+      </div>
     </div>
-    <p>Kontaktinė informacija: <a href="mailto:nedas.adulis@stud.vilniustech.lt">nedas.adulis@stud.vilniustech.lt</a></p>
-    <p>© 2025 Puslapio kūrėjas: Nedas Adulis</p>
   </footer>
+
 </body>
 
 </html>
