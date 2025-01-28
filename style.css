@@ -1,84 +1,189 @@
-/* Bendrai nustatymai */
+/* Bendrieji stiliai */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
     color: #333;
-    background-color: #f9f9f9;
 }
 
-/* Header stilius */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background-color: #333;
-    color: #fff;
-}
-
-/* Logotipo dydžio taisymas */
-.site-title img {
-    height: 100px; /* Fiksuotas aukštis */
-    width: auto; /* Automatiškai išlaiko proporcijas */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Navigacijos meniu */
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-/* Navigacijos mygtukų aktyvus ir hover efektas */
-.nav-links a {
-    text-decoration: none;
-    color: #fff; /* Pagrindinė spalva */
-    font-size: 16px;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-.nav-links a.active,
-.nav-links a:hover {
+.header {
+    background: #333;
     color: #fff;
-    background-color: #87ceeb; /* Šviesiai mėlyna */
+    padding: 10px 0;
 }
 
-.nav-links a:visited {
-    color: inherit; /* Išlaiko tą pačią spalvą kaip ir originalas */
+.header .logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
 }
 
-/* Pagrindinis turinys */
-main {
-    padding: 20px 10%;
+.navmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-main h1, main h2 {
+.navmenu ul li {
+    margin: 0 10px;
+}
+
+.navmenu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navmenu ul li a.active,
+.navmenu ul li a:hover {
+    background-color: #87ceeb;
+    color: #000;
+    border-radius: 5px;
+}
+
+/* Puslapio pavadinimas */
+.page-title {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 20px 0;
+}
+
+.page-title h1 {
+    margin: 0;
+    font-size: 2rem;
     color: #333;
 }
 
-.welcome {
-    text-align: center;
-    margin-bottom: 30px;
+/* Nuotrauka ir apie mane skiltis */
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer stilius */
-footer {
+.profile-details {
     text-align: center;
-    padding: 20px 10%;
+    margin-top: 20px;
+}
+
+.profile-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info ul li {
+    margin-bottom: 5px;
+}
+
+/* Mygtukai */
+a.cta-btn, button {
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #333;
     color: #fff;
-    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+    cursor: pointer;
 }
 
-/* Socialinių tinklų ikonų dydis */
-footer img {
-    height: 40px; /* Fiksuotas aukštis ikonoms */
-    width: auto; /* Automatiškai išlaiko proporcijas */
-    margin: 0 10px; /* Tarpas tarp ikonų */
+a.cta-btn:hover, button:hover {
+    background-color: #87ceeb;
+    color: #000;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Aplankytos nuorodos */
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #87ceeb;
+    text-decoration: underline;
+}
+
+/* Portfolio projektų elementai */
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer social icons */
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Back to top button */
+button.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+button.back-to-top:hover {
+    background-color: #87ceeb;
+    color: #000;
 }
