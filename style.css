@@ -34,7 +34,8 @@ body {
 .site-title {
     font-size: 24px;
     font-weight: bold;
-    color: #4CAF50;
+    color: #4CAF50 !important; /* Užtikrina, kad spalva liks žalia */
+    text-decoration: none;
 }
 
 /* Navigacijos meniu */
@@ -74,11 +75,6 @@ body {
     box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
 /* Antraščių fonai */
 h2 {
     background-color: rgba(68, 68, 68, 0.6); /* Švelni tamsi pilka */
@@ -96,11 +92,30 @@ h3 {
     margin-top: 15px;
 }
 
-/* Profilio nuotrauka ir atstumas nuo mygtuko */
+/* Bullet points centruoti */
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: center; /* Centruoja tekstą su bullet points */
+}
+
+ul li {
+    text-align: center; /* Užtikrina, kad ir pats tekstas būtų centre */
+    margin: 5px 0;
+}
+
+/* Mygtukas nebebus prilipęs prie nuotraukos */
+.page-title .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Atstumas tarp elemento ir mygtuko */
+}
+
 .profile-image {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px; /* Atitraukia nuo mygtuko */
+    margin-bottom: 30px; /* Pakoreguotas atstumas nuo mygtuko */
 }
 
 .profile-image img {
@@ -120,24 +135,13 @@ h3 {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 40px; /* Pakoreguotas atstumas nuo nuotraukos */
+    margin-top: 40px; /* Didesnis atstumas nuo nuotraukos */
     font-weight: bold;
 }
 
 .cta-btn:hover {
     background-color: #45a049;
     transform: scale(1.05);
-}
-
-/* Bullet points arčiau teksto */
-ul {
-    list-style-position: inside;
-    padding-left: 0;
-}
-
-ul li {
-    text-align: left;
-    margin: 5px 0;
 }
 
 /* Footer */
