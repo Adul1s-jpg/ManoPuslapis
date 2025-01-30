@@ -164,3 +164,10 @@ footer p {
     margin: 5px 0;
     font-size: 14px;
 }
+
+#clock-container {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
