@@ -1,33 +1,31 @@
 /* Bendrieji stiliai */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+    color: #fff;
+    background-color: #000;
 }
 
 /* Header (navigacija viršuje) */
 .header {
-    background: #333;
+    background: #111;
     color: #fff;
-    padding: 15px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #222;
 }
 
-/* NedoSvetaine tekstinis logotipas */
 .header .logo {
     text-decoration: none;
-}
-
-.header .logo h1 {
+    display: flex;
+    align-items: center;
     font-size: 24px;
-    margin: 0;
-    color: #fff;
     font-weight: bold;
+    color: #0f0;
     padding-left: 20px;
 }
 
@@ -50,47 +48,36 @@ body {
 }
 
 .navmenu ul li a {
-    color: #fff;
+    color: #aaa;
     text-decoration: none;
     font-size: 16px;
     padding: 8px 12px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
+    transition: color 0.3s ease;
 }
 
 .navmenu ul li a.active,
 .navmenu ul li a:hover {
-    background-color: #87ceeb;
-    color: #000;
+    color: #fff;
 }
 
-/* Sekcijos su pilku fonu */
-.section-gray {
-    background-color: #f0f0f0;
-    padding: 40px 0;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-/* Užtikrina, kad puslapis nebūtų per trumpas */
-main {
-    min-height: 80vh;
-    padding: 40px 0;
+/* Hero sekcija */
+.hero {
     text-align: center;
-}
-
-/* Apie mane puslapio nuotrauka */
-.profile-image {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.profile-image img {
-    width: 200px;
-    height: auto;
+    padding: 100px 20px;
+    background: #111;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ccc;
 }
 
 /* Mygtuko stilius */
@@ -98,55 +85,28 @@ main {
     display: inline-block;
     padding: 12px 20px;
     font-size: 18px;
-    background-color: #333;
-    color: #fff;
+    background-color: #0f0;
+    color: #000;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 30px;
+    font-weight: bold;
 }
 
 .cta-btn:hover {
-    background-color: #87ceeb;
-    color: #000;
+    background-color: #00ff7f;
     transform: scale(1.05);
-}
-
-/* Sąrašai (bullet point) */
-ul {
-    list-style-position: inside;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 5px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Puslapio pavadinimai */
-.page-title {
-    text-align: center;
-    background: #e8e8e8;
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.page-title h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: #333;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #111;
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+    border-top: 1px solid #222;
 }
 
 footer .social-icons img {
@@ -160,23 +120,18 @@ footer .social-icons img:hover {
     transform: scale(1.2);
 }
 
-footer p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
 /* Laikrodžio stilius */
 #clock-container {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    color: #fff;
-    background: #333;
+    color: #0f0;
+    background: #111;
     padding: 15px;
     border-radius: 10px;
-    width: 200px;
+    width: 220px;
     margin: 20px auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 255, 0, 0.3);
 }
 
 #clock {
