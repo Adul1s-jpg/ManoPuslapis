@@ -8,71 +8,49 @@ body {
     background-color: #f9f9f9;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Užtikrina, kad puslapiai nebūtų per trumpi */
+main {
+    min-height: 80vh; /* Užtikrina, kad turinys užimtų didžiąją dalį ekrano */
+    padding: 40px 0;
 }
 
-/* Navigacijos meniu */
-.header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Centruoja turinį index puslapyje */
+.welcome, .features {
+    text-align: center;
+    padding: 40px 0;
 }
 
-/* Logotipo stilius (be paveikslėlio) */
-.header .logo h1 {
-    font-size: 20px;
-    margin: 0;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Navigacijos meniu */
-.navmenu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Nuotrauka „Apie mane“ puslapyje */
+.profile-image {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-bottom: 20px;
 }
 
-.navmenu ul li {
-    margin: 0 10px;
+.profile-image img {
+    width: 200px; /* Sumažintas dydis */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navmenu ul li a {
+/* „Eiti į Portfolio“ mygtuko stilius */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #333;
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
-    padding: 5px 10px;
-    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
 }
 
-.navmenu ul li a.active,
-.navmenu ul li a:hover {
+.cta-btn:hover {
     background-color: #87ceeb;
     color: #000;
-    border-radius: 5px;
-}
-
-/* Puslapio pavadinimai */
-.page-title {
-    text-align: center;
-    background: #e8e8e8;
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.page-title h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: #333;
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -81,6 +59,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 40px; /* Užtikrina, kad turinys nebūtų per arti */
 }
 
 footer .social-icons img {
@@ -92,9 +71,4 @@ footer .social-icons img {
 
 footer .social-icons img:hover {
     transform: scale(1.2);
-}
-
-footer p {
-    margin: 5px 0;
-    font-size: 14px;
 }
