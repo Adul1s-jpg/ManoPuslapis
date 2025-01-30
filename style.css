@@ -17,24 +17,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #222;
     padding-left: 40px;
     padding-right: 40px;
 }
 
-/* NedoSvetaine antraštė su linija per visą puslapį */
+/* NedoSvetaine antraštė su linija */
 .site-title-container {
     width: 100%;
     text-align: center;
     padding-bottom: 10px;
-    border-bottom: 2px solid #4CAF50;
     margin-bottom: 20px;
+    border-bottom: 2px solid #ccc; /* Šviesiai pilka linija */
 }
 
 .site-title {
     font-size: 24px;
     font-weight: bold;
-    color: #4CAF50 !important; /* Užtikrina, kad spalva liks žalia */
+    color: #4CAF50; /* Grąžinta į žalią */
     text-decoration: none;
 }
 
@@ -96,26 +95,19 @@ h3 {
 ul {
     list-style-position: inside;
     padding-left: 0;
-    text-align: center; /* Centruoja tekstą su bullet points */
+    text-align: center;
 }
 
 ul li {
-    text-align: center; /* Užtikrina, kad ir pats tekstas būtų centre */
+    text-align: center;
     margin: 5px 0;
 }
 
-/* Mygtukas nebebus prilipęs prie nuotraukos */
-.page-title .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Atstumas tarp elemento ir mygtuko */
-}
-
+/* Profilio nuotrauka */
 .profile-image {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px; /* Pakoreguotas atstumas nuo mygtuko */
+    margin-bottom: 40px; /* Didesnis atstumas nuo mygtuko */
 }
 
 .profile-image img {
@@ -135,7 +127,7 @@ ul li {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 40px; /* Didesnis atstumas nuo nuotraukos */
+    margin-top: 20px; /* Pakoreguotas atstumas nuo nuotraukos */
     font-weight: bold;
 }
 
