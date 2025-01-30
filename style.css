@@ -8,75 +8,30 @@ body {
     background-color: #f9f9f9;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-.header {
-    background: #333;
-    color: #fff;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* NedoSvetaine tekstinis logotipas */
-.header .logo h1 {
-    font-size: 24px;
-    margin: 0;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* Navigacijos meniu */
-.navmenu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navmenu ul li {
-    margin: 0 15px;
-}
-
-.navmenu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 12px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.navmenu ul li a.active,
-.navmenu ul li a:hover {
-    background-color: #87ceeb;
-    color: #000;
-    border-radius: 5px;
-}
-
-/* Užtikrina, kad puslapis nebūtų per trumpas */
+/* Užtikrina, kad puslapiai nebūtų per trumpi */
 main {
     min-height: 80vh;
     padding: 40px 0;
     text-align: center;
 }
 
+/* Sekcijos su pilku fonu */
+.section-gray {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
 /* Apie mane puslapio nuotrauka */
 .profile-image {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Padidintas tarpas po nuotrauka */
 }
 
 .profile-image img {
-    width: 200px; /* Sumažintas dydis */
+    width: 200px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -92,13 +47,41 @@ main {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px;
+    margin-top: 30px; /* Didesnis tarpas virš mygtuko */
 }
 
 .cta-btn:hover {
     background-color: #87ceeb;
     color: #000;
     transform: scale(1.05);
+}
+
+/* Sąrašai (bullet point) */
+ul {
+    list-style-position: inside;
+    padding-left: 20px; /* Priartina bullet point prie teksto */
+}
+
+ul li {
+    margin-bottom: 5px; /* Sumažintas tarpas tarp punktų */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Puslapio pavadinimai */
+.page-title {
+    text-align: center;
+    background: #e8e8e8;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
 }
 
 /* Footer */
