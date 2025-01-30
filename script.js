@@ -11,16 +11,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Laikrodžio funkcija
+    // Laikrodžio funkcija (tik jei yra `clock`)
     function updateClock() {
+        const clockElement = document.getElementById('clock');
+        if (!clockElement) return; // Jei nėra laikrodžio, išeinam
+
         const now = new Date();
         const hours = now.getHours().toString().padStart(2, '0');
         const minutes = now.getMinutes().toString().padStart(2, '0');
         const seconds = now.getSeconds().toString().padStart(2, '0');
-        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        clockElement.textContent = `${hours}:${minutes}:${seconds}`;
     }
-    setInterval(updateClock, 1000);
-    updateClock();
+
+    // Paleisti laikrodį, jei `clock` yra puslapyje
+    if (document.getElementById('clock')) {
+        setInterval(updateClock, 1000);
+        updateClock();
+    }
+
 
     // Mygtukas "Į viršų"
     const backToTopButton = document.createElement('button');
@@ -65,76 +73,61 @@ document.addEventListener("DOMContentLoaded", function() {
             MathJax.typesetPromise();
         }, 500); // 0.5 sekundės uždelsimas
     }
+});
 
-    // Kontaktų formos apdorojimas
-    const submitBtn = document.getElementById("submitBtn");
-    if (submitBtn) {
-        submitBtn.addEventListener("click", function() {
-            // Gauti įvesties duomenis
-            const name = document.getElementById("name").value.trim();
-            const surname = document.getElementById("surname").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const address = document.getElementById("address").value.trim();
-            const param1 = parseFloat(document.getElementById("param1").value);
-            const param2 = parseFloat(document.getElementById("param2").value);
-            const param3 = parseFloat(document.getElementById("param3").value);
-            const param4 = parseFloat(document.getElementById("param4").value);
-            const param5 = parseFloat(document.getElementById("param5").value);
+document.getElementById("submit-btn").addEventListener("click", function () {
+    // Gauti formos reikšmes
+    const vardas = document.getElementById("vardas").value;
+    const pavarde = document.getElementById("pavarde").value;
+    const elpastas = document.getElementById("elpastas").value;
+    const telefonas = document.getElementById("telefonas").value;
+    const adresas = document.getElementById("adresas").value;
 
-            // Patikrinti, ar visi laukai užpildyti
-            if (!name || !surname || !email || !phone || !address || isNaN(param1) || isNaN(param2) || isNaN(param3) || isNaN(param4) || isNaN(param5)) {
-                alert("Prašome užpildyti visus laukus teisingai!");
-                return;
-            }
+    // Požymių reikšmės (skaičiai)
+    const pozymiai = [];
+    for (let i = 1; i <= 5; i++) {
+        pozymiai.push(Number(document.getElementById(`pozymis${i}`).value));
+    }
 
-            // Tikrinti el. pašto formatą
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                alert("Įveskite teisingą el. pašto adresą!");
-                return;
-            }
+    // Apskaičiuoti požymių vidurkį
+    const vidurkis = pozymiai.reduce((a, b) => a + b, 0) / pozymiai.length;
 
-            // Tikrinti telefono numerį
-            const phonePattern = /^\+?\d{7,15}$/;
-            if (!phonePattern.test(phone)) {
-                alert("Įveskite teisingą telefono numerį!");
-                return;
-            }
+    // Sukurti objektą
+    const kontaktas = {
+        vardas,
+        pavarde,
+        elpastas,
+        telefonas,
+        adresas,
+        pozymiai,
+        vidurkis
+    };
 
-            // Sukurti objektą
-            const userData = {
-                vardas: name,
-                pavarde: surname,
-                el_pastas: email,
-                telefonas: phone,
-                adresas: address,
-                pozymiai: [param1, param2, param3, param4, param5]
-            };
+    // Išvesti objektą į konsolę
+    console.log("Išsaugoti duomenys:", kontaktas);
 
-            // Apskaičiuoti požymių vidurkį
-            const average = (param1 + param2 + param3 + param4 + param5) / 5;
-            let color = "green";
-            if (average < 3) {
-                color = "red";
-            } else if (average >= 3 && average < 7) {
-                color = "orange";
-            }
+    // Išvesti rezultatus puslapyje
+    const rezultatuLaukas = document.getElementById("rezultatai");
+    rezultatuLaukas.innerHTML = `
+        <p><strong>Vardas:</strong> ${vardas}</p>
+        <p><strong>Pavardė:</strong> ${pavarde}</p>
+        <p><strong>El. paštas:</strong> ${elpastas}</p>
+        <p><strong>Telefonas:</strong> ${telefonas}</p>
+        <p><strong>Adresas:</strong> ${adresas}</p>
+        <p><strong>Požymiai:</strong></p>
+        <ul>
+            ${pozymiai.map(p => `<li>${p}</li>`).join("")}
+        </ul>
+        <p><strong>Vidurkis:</strong> <span id="vidurkio-spalva">${vidurkis.toFixed(2)}</span></p>
+    `;
 
-            // Išvesti rezultatą naršyklės konsolėje
-            console.log("Įvesti duomenys:", userData);
-
-            // Atvaizduoti duomenis puslapyje
-            const resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = `
-                <p><strong>Vardas:</strong> ${name}</p>
-                <p><strong>Pavardė:</strong> ${surname}</p>
-                <p><strong>El. paštas:</strong> ${email}</p>
-                <p><strong>Telefonas:</strong> ${phone}</p>
-                <p><strong>Adresas:</strong> ${address}</p>
-                <p><strong>Požymiai:</strong> ${param1}, ${param2}, ${param3}, ${param4}, ${param5}</p>
-                <p style="color: ${color};"><strong>${name} ${surname} (${email}):</strong> ${average.toFixed(2)}</p>
-            `;
-        });
+    // Pritaikyti vidurkio spalvą
+    const vidurkioElementas = document.getElementById("vidurkio-spalva");
+    if (vidurkis < 3) {
+        vidurkioElementas.style.color = "red";
+    } else if (vidurkis < 7) {
+        vidurkioElementas.style.color = "orange";
+    } else {
+        vidurkioElementas.style.color = "green";
     }
 });

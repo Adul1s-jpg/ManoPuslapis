@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontaktų Forma</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Header section -->
@@ -33,34 +32,33 @@
                 <h2>Susisiekite su manimi</h2>
                 <p>Užpildykite žemiau esančią formą, kad susisiektumėte.</p>
 
-                <form id="contactForm">
-                    <label for="name">Vardas:</label>
-                    <input type="text" id="name" required>
-                    
-                    <label for="surname">Pavardė:</label>
-                    <input type="text" id="surname" required>
-                    
-                    <label for="email">El. paštas:</label>
-                    <input type="email" id="email" required>
-                    
-                    <label for="phone">Telefonas:</label>
-                    <input type="tel" id="phone" required>
-                    
-                    <label for="address">Adresas:</label>
-                    <input type="text" id="address" required>
-                    
-                    <h3>Požymiai (tik skaičiai)</h3>
-                    <input type="number" id="param1" required>
-                    <input type="number" id="param2" required>
-                    <input type="number" id="param3" required>
-                    <input type="number" id="param4" required>
-                    <input type="number" id="param5" required>
-                    
-                    <button type="button" id="submitBtn">Siųsti</button>
+                <form id="contact-form">
+                    <label for="vardas">Vardas:</label>
+                    <input type="text" id="vardas" required><br>
+                
+                    <label for="pavarde">Pavardė:</label>
+                    <input type="text" id="pavarde" required><br>
+                
+                    <label for="elpastas">El. paštas:</label>
+                    <input type="email" id="elpastas" required><br>
+                
+                    <label for="telefonas">Telefonas:</label>
+                    <input type="tel" id="telefonas" required><br>
+                
+                    <label for="adresas">Adresas:</label>
+                    <input type="text" id="adresas" required><br>
+                
+                    <label>Požymiai (tik skaičiai):</label>
+                    <input type="number" id="pozymis1" required>
+                    <input type="number" id="pozymis2" required>
+                    <input type="number" id="pozymis3" required>
+                    <input type="number" id="pozymis4" required>
+                    <input type="number" id="pozymis5" required><br>
+                
+                    <button type="button" id="submit-btn">Išsaugoti</button>
                 </form>
-
-                <h2>Rezultatai:</h2>
-                <div id="result"></div>
+                
+                <div id="rezultatai"></div>                
             </div>
         </section>
     </main>
@@ -83,5 +81,6 @@
             <p>© 2025 Puslapio kūrėjas: Nedas Adulis</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
