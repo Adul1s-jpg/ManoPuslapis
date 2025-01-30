@@ -70,7 +70,7 @@ body {
 
 /* Antraščių fonai */
 h2 {
-    background-color: rgba(68, 68, 68, 0.6); /* Švelni tamsi pilka */
+    background-color: rgba(68, 68, 68, 0.6);
     display: inline-block;
     padding: 10px 20px;
     border-radius: 5px;
@@ -78,7 +78,7 @@ h2 {
 }
 
 h3 {
-    background-color: rgba(68, 68, 68, 0.3); /* Dar švelnesnė pilka */
+    background-color: rgba(68, 68, 68, 0.3);
     display: inline-block;
     padding: 8px 16px;
     border-radius: 5px;
@@ -186,7 +186,7 @@ footer .social-icons img:hover {
 }
 
 .math-container math msub {
-    font-size: 1.5rem; /* Subscript mažesnis */
+    font-size: 1.5rem;
     vertical-align: -0.5em;
 }
 
@@ -194,4 +194,83 @@ footer .social-icons img:hover {
 .svg-container {
     text-align: center;
     margin-top: 20px;
+}
+
+/* Kontaktų forma */
+.contact-form {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #4CAF50;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: #000;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-form button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Responsyvus dizainas */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navmenu ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .navmenu ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
 }

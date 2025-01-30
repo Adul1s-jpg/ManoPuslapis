@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktų Forma</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <h1>NedoSvetaine</h1>
+            </a>
+            <nav class="navmenu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Pagrindinis</a></li>
+                    <li><a href="about.html">Apie</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html" class="active">Kontaktai</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section class="contact-section">
+            <div class="container">
+                <h2>Susisiekite su manimi</h2>
+                <p>Užpildykite žemiau esančią formą, kad susisiektumėte.</p>
+
+                <form id="contactForm">
+                    <label for="name">Vardas:</label>
+                    <input type="text" id="name" required>
+                    
+                    <label for="surname">Pavardė:</label>
+                    <input type="text" id="surname" required>
+                    
+                    <label for="email">El. paštas:</label>
+                    <input type="email" id="email" required>
+                    
+                    <label for="phone">Telefonas:</label>
+                    <input type="tel" id="phone" required>
+                    
+                    <label for="address">Adresas:</label>
+                    <input type="text" id="address" required>
+                    
+                    <h3>Požymiai (tik skaičiai)</h3>
+                    <input type="number" id="param1" required>
+                    <input type="number" id="param2" required>
+                    <input type="number" id="param3" required>
+                    <input type="number" id="param4" required>
+                    <input type="number" id="param5" required>
+                    
+                    <button type="button" id="submitBtn">Siųsti</button>
+                </form>
+
+                <h2>Rezultatai:</h2>
+                <div id="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/">
+                    <img src="img/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com/">
+                    <img src="img/twitter-icon.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="img/instagram-icon.png" alt="Instagram">
+                </a>
+            </div>
+            <p>Kontaktinė informacija: <a href="mailto:nedas.adulis@stud.vilniustech.lt">nedas.adulis@stud.vilniustech.lt</a></p>
+            <p>© 2025 Puslapio kūrėjas: Nedas Adulis</p>
+        </div>
+    </footer>
+</body>
+</html>
