@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- MathJax biblioteka matematikos objektams -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
     .math-container {
       text-align: center;
@@ -119,9 +119,13 @@
 
   <script>
     window.onload = function() {
-      MathJax.typesetPromise();
+      setTimeout(() => {
+        if (window.MathJax) {
+          MathJax.typesetPromise();
+        }
+      }, 500);
     };
-  </script>
+  </script>  
 </body>
 
 </html>
