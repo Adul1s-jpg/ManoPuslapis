@@ -11,6 +11,26 @@
   <!-- MathJax biblioteka matematikos objektams -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .math-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .math-container math {
+      font-size: 1.5rem;
+    }
+
+    .svg-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+  </style>
 </head>
 
 <body class="portfolio-page">
@@ -42,47 +62,51 @@
 
     <section id="portfolio" class="portfolio-section">
       <div class="container">
-        <h2>Matematinis objektas</h2>
-        <p>
-          Toliau pateikiama matematinė formulė, sukurta naudojant MathML ir MathJax biblioteką. Tai yra Gauss-Ostrogradsky teorema:
-        </p>
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <!-- Integralo simbolis ir tūrio integravimas -->
-          <mrow>
-            <mo>&#x222B;</mo>
-            <msub>
-              <mi>D</mi>
-            </msub>
-            <mo>(</mo>
-            <mo>&#x2207;</mo>
-            <mo>&#x22C5;</mo>
-            <mi>F</mi>
-            <mo>)</mo>
-            <mi>dV</mi>
-          </mrow>
-          <mo>=</mo>
-          <!-- Paviršiaus integralas -->
-          <mrow>
-            <mo>&#x222B;</mo>
-            <msub>
-              <mo>&#x2202;</mo>
-              <mi>D</mi>
-            </msub>
-            <mi>F</mi>
-            <mo>&#x22C5;</mo>
-            <mi>n</mi>
-            <mi>dS</mi>
-          </mrow>
-        </math>
+        <div class="math-container">
+          <h2>Matematinis objektas</h2>
+          <p>
+            Toliau pateikiama matematinė formulė, sukurta naudojant MathML ir MathJax biblioteką. Tai yra Gauss-Ostrogradsky teorema:
+          </p>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <!-- Integralo simbolis ir tūrio integravimas -->
+            <mrow>
+              <mo>&#x222B;</mo>
+              <msub>
+                <mi>D</mi>
+              </msub>
+              <mo>(</mo>
+              <mo>&#x2207;</mo>
+              <mo>&#x22C5;</mo>
+              <mi>F</mi>
+              <mo>)</mo>
+              <mi>dV</mi>
+            </mrow>
+            <mo>=</mo>
+            <!-- Paviršiaus integralas -->
+            <mrow>
+              <mo>&#x222B;</mo>
+              <msub>
+                <mo>&#x2202;</mo>
+                <mi>D</mi>
+              </msub>
+              <mi>F</mi>
+              <mo>&#x22C5;</mo>
+              <mi>n</mi>
+              <mi>dS</mi>
+            </mrow>
+          </math>
+        </div>
 
-        <h2>SVG animacija</h2>
-        <p>Žemiau pateikiama SVG animacija, kuri papildo matematinės formulės aiškumą.</p>
-        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-          <!-- Apskritimas su animacija -->
-          <circle cx="100" cy="100" r="50" fill="blue">
-            <animate attributeName="r" from="50" to="70" dur="1s" repeatCount="indefinite" />
-          </circle>
-        </svg>
+        <div class="svg-container">
+          <h2>SVG animacija</h2>
+          <p>Žemiau pateikiama SVG animacija, kuri papildo matematinės formulės aiškumą.</p>
+          <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Apskritimas su animacija -->
+            <circle cx="100" cy="100" r="50" fill="blue">
+              <animate attributeName="r" from="50" to="70" dur="1s" repeatCount="indefinite" />
+            </circle>
+          </svg>
+        </div>
       </div>
     </section>
   </main>
