@@ -58,4 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
             icon.style.transform = 'scale(1)';
         });
     });
+
+    // MathJax perbraižymas po puslapio įkėlimo
+    if (window.MathJax) {
+        setTimeout(() => {
+            MathJax.typesetPromise();
+        }, 500); // 0.5 sekundės uždelsimas
+    }
 });
