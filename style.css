@@ -21,22 +21,18 @@ body {
     padding: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Atskyrimas tarp logotipo ir navigacijos */
+    justify-content: space-between;
 }
 
-.header .logo {
-    text-align: center;
-}
-
+/* Logotipo stilius (be paveikslėlio) */
 .header .logo h1 {
-    font-size: 14px; /* Dar labiau sumažintas logotipo dydis */
+    font-size: 20px;
     margin: 0;
     color: #fff;
-    max-height: 40px; /* Mažesnis aukštis */
-    overflow: hidden;
-    display: inline-block;
+    font-weight: bold;
 }
 
+/* Navigacijos meniu */
 .navmenu ul {
     list-style: none;
     padding: 0;
@@ -65,24 +61,6 @@ body {
     border-radius: 5px;
 }
 
-/* Centravimas apie puslapiuose */
-.about-page .navmenu ul {
-    justify-content: center;
-}
-
-.portfolio-page .navmenu ul {
-    justify-content: center;
-}
-
-.resume-page .navmenu ul {
-    justify-content: center;
-}
-
-/* Paslėpti „Nedo Svetainė“ mygtuką index.html */
-.index-page .navmenu ul li:last-child {
-    display: none;
-}
-
 /* Puslapio pavadinimai */
 .page-title {
     text-align: center;
@@ -95,93 +73,6 @@ body {
     margin: 0;
     font-size: 2rem;
     color: #333;
-}
-
-/* Turinys */
-main {
-    padding: 20px 0;
-    text-align: center;
-}
-
-.profile-image img {
-    width: 150px;
-    height: auto;
-    max-height: 300px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.profile-details {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.profile-details h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-/* Sąrašai */
-ul {
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Mygtukai */
-a.cta-btn, button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-    text-align: center;
-    cursor: pointer;
-}
-
-a.cta-btn:hover, button:hover {
-    background-color: #87ceeb;
-    color: #000;
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-/* Portfolio projektų elementai */
-.project-item {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
-}
-
-.project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.project-item h3 {
-    margin-top: 10px;
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.project-item p {
-    font-size: 1rem;
-    color: #666;
 }
 
 /* Footer */
