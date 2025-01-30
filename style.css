@@ -171,3 +171,27 @@ footer .social-icons img:hover {
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 3px;
 }
+
+/* Matematinio objekto konteineris */
+.math-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.math-container math {
+    font-size: 3rem;
+    display: block;
+    margin: 20px auto;
+    line-height: 1.5;
+}
+
+.math-container math msub {
+    font-size: 1.5rem; /* Subscript mažesnis */
+    vertical-align: -0.5em;
+}
+
+/* SVG animacijos konteineris */
+.svg-container {
+    text-align: center;
+    margin-top: 20px;
+}
