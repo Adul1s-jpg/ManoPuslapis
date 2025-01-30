@@ -22,16 +22,21 @@ body {
     padding-right: 40px;
 }
 
-/* Pridedama plona linija po "Nedo svetainė" */
-.header .logo {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+/* Pridėta plona linija po "NedoSvetaine" per visą puslapį */
+.site-title {
     font-size: 24px;
     font-weight: bold;
     color: #4CAF50;
     padding-bottom: 10px;
-    border-bottom: 1px solid #333; /* Plona linija */
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.site-title-container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50; /* Linija po pavadinimu */
 }
 
 /* Navigacijos meniu */
@@ -78,12 +83,16 @@ body {
 .hero h1 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #4CAF50; /* Pakeista spalva, kad išsiskirtų */
+    color: #4CAF50;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: #ccc;
+/* Puslapių antraščių stiliai */
+h1, h2, h3 {
+    background-color: #222; /* Fono spalva */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
 }
 
 /* Mygtuko atitraukimas nuo nuotraukos */
@@ -96,20 +105,15 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 50px; /* Padidintas atstumas nuo nuotraukos */
+    margin-top: 30px;
     font-weight: bold;
 }
 
-.cta-btn:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-/* Profilio nuotrauka */
+/* Padidintas atstumas tarp nuotraukos ir mygtuko */
 .profile-image {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px; /* Didesnis tarpas */
 }
 
 .profile-image img {
@@ -117,6 +121,11 @@ body {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -157,11 +166,6 @@ footer .social-icons img:hover {
 #clock {
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 3px;
-}
-
-/* Puslapių pavadinimų spalvos */
-h1, h2, h3 {
-    color: #4CAF50; /* Švelnesnė žalia, kad išsiskirtų */
 }
 
 /* Bullet points arčiau teksto */
