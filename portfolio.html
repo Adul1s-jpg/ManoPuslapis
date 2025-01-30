@@ -8,10 +8,12 @@
   <meta name="description" content="Portfolio">
   <meta name="keywords" content="HTML, CSS, studentas, laboratoriniai darbai">
   <link rel="stylesheet" href="style.css">
+  <!-- MathJax biblioteka matematikos objektams -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body class="portfolio-page">
-
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -40,23 +42,47 @@
 
     <section id="portfolio" class="portfolio-section">
       <div class="container">
-        <div class="project-list">
-          <div class="project-item">
-            <img src="img/project1.jpg" alt="Projektas 1" class="project-image">
-            <h3>Projektas 1</h3>
-            <p>Trumpas aprašymas apie projektą, jo funkcionalumą ir naudotas technologijas.</p>
-          </div>
-          <div class="project-item">
-            <img src="img/project2.jpg" alt="Projektas 2" class="project-image">
-            <h3>Projektas 2</h3>
-            <p>Trumpas aprašymas apie projektą, jo funkcionalumą ir naudotas technologijas.</p>
-          </div>
-          <div class="project-item">
-            <img src="img/project3.jpg" alt="Projektas 3" class="project-image">
-            <h3>Projektas 3</h3>
-            <p>Trumpas aprašymas apie projektą, jo funkcionalumą ir naudotas technologijas.</p>
-          </div>
-        </div>
+        <h2>Matematinis objektas</h2>
+        <p>
+          Toliau pateikiama matematinė formulė, sukurta naudojant MathML ir MathJax biblioteką. Tai yra Gauss-Ostrogradsky teorema:
+        </p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <!-- Integralo simbolis ir tūrio integravimas -->
+          <mrow>
+            <mo>&#x222B;</mo>
+            <msub>
+              <mi>D</mi>
+            </msub>
+            <mo>(</mo>
+            <mo>&#x2207;</mo>
+            <mo>&#x22C5;</mo>
+            <mi>F</mi>
+            <mo>)</mo>
+            <mi>dV</mi>
+          </mrow>
+          <mo>=</mo>
+          <!-- Paviršiaus integralas -->
+          <mrow>
+            <mo>&#x222B;</mo>
+            <msub>
+              <mo>&#x2202;</mo>
+              <mi>D</mi>
+            </msub>
+            <mi>F</mi>
+            <mo>&#x22C5;</mo>
+            <mi>n</mi>
+            <mi>dS</mi>
+          </mrow>
+        </math>
+
+        <h2>SVG animacija</h2>
+        <p>Žemiau pateikiama SVG animacija, kuri papildo matematinės formulės aiškumą.</p>
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+          <!-- Apskritimas su animacija -->
+          <circle cx="100" cy="100" r="50" fill="blue">
+            <animate attributeName="r" from="50" to="70" dur="1s" repeatCount="indefinite" />
+          </circle>
+        </svg>
       </div>
     </section>
   </main>
@@ -71,7 +97,6 @@
     <p>Kontaktinė informacija: <a href="mailto:nedas.adulis@stud.vilniustech.lt">nedas.adulis@stud.vilniustech.lt</a></p>
     <p>© 2025 Puslapio kūrėjas: Nedas Adulis</p>
   </footer>
-
 </body>
 
 </html>
